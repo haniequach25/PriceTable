@@ -22,18 +22,71 @@ body {
 /* Specific CSS*/
 
 #container {
-    min-height: 1088px;
-    margin: 90px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     text-align: center;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.tour-container {
+    min-height: 1088px;
+    display: flex;
+}
+
+.tour-wrapper {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    transition: all 0.5s ease-out;
+}
+
+.next-button, .previous-button {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+    top: 50%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.next-button {
+    right: 30%;
+}
+
+.previous-button {
+    left: 30%;
+}
+
+.list-dots {
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    justify-content: space-around;
+    width: 80px;
+    left: 49%;
+}
+
+.list-dots li {
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.tour-container-item {
+    flex: 1 0 100%;
+    width: 100%;
 }
 
 .tour {
-    margin: 90px 21px;
+    margin: auto;
     position: relative;
+    width: 362px;
 }
 
 .tour-image {
@@ -58,6 +111,7 @@ body {
 .tour-info {
     background-color: #FFF;
     color: #5f727f;
+    max-width: 362px;
 }
 
 .tour-info-title {
@@ -136,4 +190,8 @@ body {
     font-family: Montserrat;
     font-size: 12px;
     color: #FFF;
+}
+
+.current-slide {
+    color: #5f727f!important;
 }
